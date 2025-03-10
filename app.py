@@ -61,10 +61,17 @@ if st.button("Generate Response"):
         document_text = extract_text_from_pdf(doc_input)
         messages.append(HumanMessage(content=document_text))
     if messages:
-        response = chat_model.invoke(messages)  # Pass messages instead of chat_template
-        parsed_response = parser.parse(response)  # Use parser.parse()
-        st.write("Generated Response:")
+        response = chat_model.invoke(messages)
+        main_content = response.content  # Extracts the main text content
+        st.write(main_content)
+        parsed_response = parser.parse(response.content)  # Parse only the main content
         st.write(parsed_response)
+        response = chat_model.invoke(messages)
+        main_content = response.conte
+        st.write(main_content)
+
+
+
     else:
         st.warning("Please enter a query, upload an image, or provide a document.")
 
