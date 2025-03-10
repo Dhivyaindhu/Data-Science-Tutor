@@ -13,7 +13,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain.schema import HumanMessage
 st.title("Data Science Tutor")
-gemini_API_KEY = AIzaSyDfZ11gOPEbZ0LDEgMGe7DG__XS5Su7uYo"
+gemini_API_KEY = "AIzaSyDfZ11gOPEbZ0LDEgMGe7DG__XS5Su7uYo"
 chat_template = ChatPromptTemplate.from_messages([
     ("system",
      "You are an AI assistant specializing in Data Science. Your role is to help users solve problems, understand concepts, theories, and methods. "
