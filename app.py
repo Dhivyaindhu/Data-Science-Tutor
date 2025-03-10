@@ -14,7 +14,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.schema import HumanMessage
 import os
 st.title("Data Science Tutor")
-gemini_API_KEY = os.getenv("AIzaSyDfZ11gOPEbZ0LDEgMGe7DG__XS5Su7uYo")
+gemini_API_KEY = "AIzaSyDfZ11gOPEbZ0LDEgMGe7DG__XS5Su7uYo"   
 chat_template = ChatPromptTemplate.from_messages([
     ("system",
      "You are an AI assistant specializing in Data Science. Your role is to help users solve problems, understand concepts, theories, and methods. "
@@ -63,7 +63,10 @@ if st.button("Generate Response"):
        # Generate response
     response = chat_model.invoke(chat_template)
     parsed_response = output_parser.parse(response)
+    esponse = chat_model.invoke(messages)  # Pass `messages` instead of `chat_template`
+    parsed_response = parser.parse(response)  # Use `parser` instead of undefined `output_parser`
 
-# Print the final output
-print("Generated Response:\n")
-print(parsed_response)
+    # Print the final output
+    st.write("Generated Response:")
+    st.write(parsed_response)
+        
