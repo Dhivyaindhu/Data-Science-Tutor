@@ -46,7 +46,7 @@ if st.button("Generate Response"):
     messages = []
 
     # Add text input
-    if text_input:
+    if Queries:
         messages.append(HumanMessage(content=Queries))
 
     # Process image input
