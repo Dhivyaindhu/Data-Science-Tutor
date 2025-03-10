@@ -47,14 +47,14 @@ if st.button("Generate Response"):
 
     # Add text input
     if Queries:
-        messages.append(HumanMessage(content=Queries))
+        messages.append(human(content=Queries))
 
     # Process image input
     if image_input:
         encoded_image = encode_image(image_input)
-        messages.append(HumanMessage(content={"image": encoded_image}))
+        messages.append(human(content={"image": encoded_image}))
 
     # Process document input
     if doc_input:
         document_text = extract_text_from_pdf(doc_input)
-        messages.append(HumanMessage(content=document_text))
+        messages.append(human(content=document_text))
