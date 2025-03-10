@@ -60,12 +60,12 @@ if st.button("Generate Response"):
     if doc_input:
         document_text = extract_text_from_pdf(doc_input)
         messages.append(HumanMessage(content=document_text))
-     if messages:
+   if messages:
         response = chat_model.invoke(messages)  # Pass messages instead of chat_template
         parsed_response = parser.parse(response)  # Use parser.parse()
         st.write("Generated Response:")
         st.write(parsed_response)
-    else:
+  else:
         st.warning("Please enter a query, upload an image, or provide a document.")
 
 
