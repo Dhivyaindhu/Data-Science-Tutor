@@ -12,9 +12,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain.schema import HumanMessage
-
-messages.append(HumanMessage(content=Queries))
-
 st.title("Data Science Tutor")
 gemini_API_KEY = os.getenv("AIzaSyDfZ11gOPEbZ0LDEgMGe7DG__XS5Su7uYo")
 chat_template = ChatPromptTemplate.from_messages([
