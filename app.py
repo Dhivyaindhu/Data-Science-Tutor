@@ -67,7 +67,7 @@ if st.button("Generate Response"):
         parsed_response = parser.parse(response.content)  # Parse only the main content
         st.write(parsed_response)
         response = chat_model.invoke(messages)
-        main_content = response.conte
+        main_content = response.content
         st.write(main_content)
 
 
