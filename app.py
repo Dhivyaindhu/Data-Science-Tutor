@@ -61,7 +61,8 @@ if st.button("Generate Response"):
         messages.append(HumanMessage(content=document_text))
        # Generate response
     response = chat_model.invoke(chat_template)
-    
-    # Parse and display output
-    st.subheader("Generated Response:")
-    st.write(output_parser.parse(response))
+    parsed_response = output_parser.parse(response)
+
+# Print the final output
+print("Generated Response:\n")
+print(parsed_response)
