@@ -60,7 +60,7 @@ if st.button("Generate Response"):
         document_text = extract_text_from_pdf(doc_input)
         messages.append(HumanMessage(content=document_text))
        # Generate response
-    response = chat_model.invoke(prompt_template)
+    response = chat_model.invoke(chat_template)
     
     # Parse and display output
     st.subheader("Generated Response:")
