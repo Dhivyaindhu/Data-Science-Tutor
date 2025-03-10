@@ -1,8 +1,6 @@
 streamlit
 langchain
+langchain-google-genai
 google-generativeai
 PyPDF2
 python-dotenv
-langchain-google-genai
- HumanMessage
-
