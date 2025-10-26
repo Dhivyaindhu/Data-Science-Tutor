@@ -28,7 +28,7 @@ chat_template = ChatPromptTemplate.from_messages([
      "Provide a structured question set that progresses from basic to advanced levels in the field of Data Science.")
 ])
 
-chat_model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=gemini_API_KEY)
+chat_model = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=gemini_API_KEY)
 parser = StrOutputParser()
 Queries=st.text_input("Enter your question")
 def encode_image(image_file):
